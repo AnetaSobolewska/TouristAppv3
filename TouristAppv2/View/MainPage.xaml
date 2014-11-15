@@ -7,12 +7,13 @@
     xmlns:ViewModel="using:TouristAppv2.ViewModel"
     x:Class="TouristAppv2.View.MainPage"
     mc:Ignorable="d">
-	<Page.BottomAppBar>
-		<CommandBar Height="92">
-			<AppBarButton Icon="Add" Label="Add"/>
-			<AppBarButton Icon="Remove" Label="Remove"/>
-		</CommandBar>
-	</Page.BottomAppBar>
+    <Page.BottomAppBar>
+        <CommandBar Height="92">
+            <AppBarButton Icon="AlignLeft" Label="Options"/>
+            <AppBarButton Icon="Add" Label="Add"/>
+            <AppBarButton Icon="Remove" Label="Remove"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 
     <Grid>
         <Grid.Background>
