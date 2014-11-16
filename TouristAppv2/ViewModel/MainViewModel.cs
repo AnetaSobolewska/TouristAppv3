@@ -21,7 +21,7 @@ namespace TouristAppv2.ViewModel
         private string _cathedralImage;
        private string _hotelComwellImage;
         private string _hotelPrindsenImage;
-        private ObservableCollection<PlaceModel> Places; 
+        //private ObservableCollection<PlaceModel> Places; 
          public static string SelectedCategory { get; set; }
         // public string _selectedcategory = ActualPlaceModel.Name;
 

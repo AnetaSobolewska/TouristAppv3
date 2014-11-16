@@ -22,24 +22,32 @@ namespace TouristAppv2.ViewModel
         public static PlaceModel ActualPlaceModel { get; set; }
        
         private string _selectedcategory = MainViewModel.SelectedCategory;
+        private string _description;
 
 
         public GenericViewModel()
         {
-            XDocument xdoc =;
+            XDocument xdoc = XDocument.Load("Places.xml");
             XAttribute name = xdoc.Descendants("place").ElementAt(0).Attribute("name");
             if (_selectedcategory==name.Value)
             {
                 PlaceName = name.Value;
-                IEnumerable<XElement> description = xdoc.Descendants("place").ElementAt(0).Descendants("description");
-            }
+                IEnumerable<XElement> descriptionofplace = xdoc.Descendants("place").ElementAt(0).Descendants("description");
+                
+                
 
+            }
+            
 
 
 
         }
 
-    
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
 
         public string PlaceName
         {

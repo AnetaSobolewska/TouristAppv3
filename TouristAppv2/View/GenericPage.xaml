@@ -39,7 +39,7 @@
         <Grid.DataContext>
             <ViewModel:GenericViewModel/>
         </Grid.DataContext>
-        <Image HorizontalAlignment="Left" Height="554" VerticalAlignment="Top" Width="582" Margin="75,123,0,0" Source="{}"/>
+        <Image HorizontalAlignment="Left" Height="554" VerticalAlignment="Top" Width="582" Margin="75,123,0,0" Source="{Binding Description}"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="747,133,0,0" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding PlaceName}" VerticalAlignment="Top" Margin="75,64,0,0" Height="64" Width="614" FontSize="48"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="126,682,0,0" FontSize="18"/>
