@@ -27,31 +27,33 @@ namespace TouristAppv2.View
         public MainPage()
         {
             this.InitializeComponent();
+            XMLContainer xmlcontainer = new XMLContainer();
+            MainViewModel.SelectedCategory = null;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainViewModel.ActualPlaceModel = (PlaceModel)((Button)sender).Content;
+            MainViewModel.SelectedCategory = (string)((Button)sender).Content;
             this.Frame.Navigate(typeof(GenericPage));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MainViewModel.ActualPlaceModel = (PlaceModel)((Button)sender).Content;
+            MainViewModel.SelectedCategory = (string)((Button)sender).Content;
 
             this.Frame.Navigate(typeof(GenericPage));
         }
 
         private void Hotel_Comwell_Click(object sender, RoutedEventArgs e)
         {
-            MainViewModel.ActualPlaceModel = (PlaceModel)((Button)sender).Content;
+            MainViewModel.SelectedCategory = (string)((Button)sender).Content;
 
             this.Frame.Navigate(typeof(GenericPage));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainViewModel.ActualPlaceModel = (PlaceModel)((Button)sender).Content;
+            MainViewModel.SelectedCategory = (string)((Button)sender).Content;
 
             this.Frame.Navigate(typeof(GenericPage));
         }

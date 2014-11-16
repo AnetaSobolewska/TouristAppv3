@@ -28,8 +28,8 @@
         <Image HorizontalAlignment="Left" Height="359" VerticalAlignment="Top" Width="444" RenderTransformOrigin="0.493,0.507" Margin="51,80,0,0" Source="{Binding MainImage}"/>
         <TextBlock HorizontalAlignment="Left" Margin="51,434,0,0" TextWrapping="Wrap" Text="{Binding RoskildeDescripton}" VerticalAlignment="Top" Height="306" Width="479" FontSize="20"/>
         <Image HorizontalAlignment="Left" VerticalAlignment="Top" Margin="588,41,0,0" Source="{Binding VikingImage}" Height="259" Width="317"/>
-        <Button Content="{Binding VikingMuseum}" HorizontalAlignment="Left" Margin="689,312,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="{Binding RoskildeCathedral}" HorizontalAlignment="Left" Margin="1053,312,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <Button HorizontalAlignment="Left" Margin="689,312,0,0" VerticalAlignment="Top" Click="Button_Click" Content="Viking Museum"/>
+        <Button HorizontalAlignment="Left" Margin="1053,312,0,0" VerticalAlignment="Top" Click="Button_Click_2" Content="Roskilde Cathedral"/>
         <Image HorizontalAlignment="Left" VerticalAlignment="Top" Margin="964,41,0,0" Source="{Binding CathedralImage}" Height="259" Width="358"/>
         <Image HorizontalAlignment="Left" VerticalAlignment="Top" Margin="588,466,0,0" Source="{Binding HotelComwellImage}" Height="212" Width="356"/>
         <Image HorizontalAlignment="Left" VerticalAlignment="Top" Margin="965.019,463.995,0,0" Source="{Binding HotelPrindsenImage}" RenderTransformOrigin="0.5,0.5" Height="235.771" UseLayoutRounding="False" Width="342.048" d:LayoutRounding="Auto">
@@ -37,8 +37,8 @@
                 <CompositeTransform Rotation="-0.343"/>
             </Image.RenderTransform>
         </Image>
-        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1053,705,0,0" Content="{Binding HotelPrindsen}" Click="Button_Click_1"/>
-        <Button x:Name="Hotel_Comwell" Content="{Binding HotelComwell}" Margin="689,705,0,0" Click="Hotel_Comwell_Click" VerticalAlignment="Top"/>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1053,705,0,0" Click="Button_Click_1" Content="Hotel Prindsen"/>
+        <Button x:Name="Hotel_Comwell" Margin="689,705,0,0" Click="Hotel_Comwell_Click" VerticalAlignment="Top" Content="Hotel Comwell"/>
 
     </Grid>
 </Page>
