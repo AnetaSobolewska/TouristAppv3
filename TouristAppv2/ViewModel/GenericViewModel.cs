@@ -33,8 +33,11 @@ namespace TouristAppv2.ViewModel
             {
                 PlaceName = name.Value;
                 IEnumerable<XElement> descriptionofplace = xdoc.Descendants("place").ElementAt(0).Descendants("description");
-                
-                
+                foreach (XElement descElement in descriptionofplace)
+                {
+                    Description = descElement.Value;
+                }
+               
 
             }
             
