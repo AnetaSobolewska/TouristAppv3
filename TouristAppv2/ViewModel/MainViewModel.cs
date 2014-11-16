@@ -75,8 +75,9 @@ namespace TouristAppv2.ViewModel
 
         public MainViewModel()
         {
-            Places=new ObservableCollection<PlaceModel>();
-            XMLContainer xmlContainer=new XMLContainer();
+     
+
+         
 
             //adds Roskilde Wikipedia description to the Main Page
             RoskildeDescripton =

@@ -131,7 +131,6 @@
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="XMLContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -152,10 +151,11 @@
     <Content Include="Assets\MainPage\VikinMuseum_ship.jpg" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\MainPage\MainPage_Roskilde.jpg" />
-    <Content Include="Assets\XML File\Places.xml" />
+    <Content Include="Assets\XMLFile\Places.xml" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Places.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

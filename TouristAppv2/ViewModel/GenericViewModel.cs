@@ -7,6 +7,8 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Windows.Data.Xml.Dom;
+using Windows.Storage.FileProperties;
 using TouristAppv2.Annotations;
 using TouristAppv2.Model;
 
@@ -15,41 +17,28 @@ namespace TouristAppv2.ViewModel
     class GenericViewModel:INotifyPropertyChanged
     {
         
-        private string Places;
+      
         public static PlaceModel ActualPlaceModel { get; set; }
        
-        public string _selectedcategory = MainViewModel.SelectedCategory;
-        private Dictionary<string, string> _placeModels;
+        private string _selectedcategory = MainViewModel.SelectedCategory;
 
-        public Dictionary<string, string> PlaceModels
-        {
-            get { return _placeModels; }
-            set
-            {
-                _placeModels = value;
-                OnPropertyChanged("PlaceModels");
-                
-            }
-        }
 
         public GenericViewModel()
         {
+            XDocument xdoc = XDocument.Load(@"C:\Users\Pan Jakub\Desktop\TouristAppSOBOLGINA\TouristAppv2\Places.xml");
+            XAttribute name = xdoc.Descendants("place").ElementAt(0).Attribute("name");
+            if (_selectedcategory==name.Value)
+            {
+                PlaceName = name.Value;
+                IEnumerable<XElement> description = xdoc.Descendants("place").ElementAt(0).Descendants("description");
+            }
 
 
-            PlaceModels = new Dictionary<string, string>();
-
-  
-            LoadXML();
-
-            PopulatePageInfo();
 
 
         }
 
-        private void LoadXML()
-        {
-            XMLContainer xmlcontainer= new XMLContainer();
-        }
+    
 
         public string PlaceName
         {
@@ -57,17 +46,7 @@ namespace TouristAppv2.ViewModel
             set { _selectedcategory = value; }
         }
 
-        private void PopulatePageInfo()
-        {
-          Places=  XElement.Load("Assets/XML File/Places.xml");
-            foreach (XElement place in Places)
-            {
-                PlaceModels["Name"] = place.Attribute("name").Value;
-                PlaceModels["Description"] = place.Element("description").Value;
-                PlaceModels["Adress"] = place.Element("adress").Value;
-                PlaceModels["ImageUrl"] = place.Element("ImageURL").Value;
-            }
-        }
+     
 
         public event PropertyChangedEventHandler PropertyChanged;
 

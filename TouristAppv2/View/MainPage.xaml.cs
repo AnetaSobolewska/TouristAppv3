@@ -27,7 +27,6 @@ namespace TouristAppv2.View
         public MainPage()
         {
             this.InitializeComponent();
-            XMLContainer xmlcontainer = new XMLContainer();
             MainViewModel.SelectedCategory = null;
         }
 
